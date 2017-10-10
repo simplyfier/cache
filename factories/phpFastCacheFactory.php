@@ -1,6 +1,6 @@
 <?php
 /**
- * StupidlySimple Framework - A PHP Framework For Lazy Developers
+ * StupidlySimple Framework - A PHP Framework For Lazy Developers.
  *
  * Copyright (c) 2017 Fariz Luqman
  *
@@ -22,19 +22,20 @@
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
- * @package     StupidlySimple
  * @author      Fariz Luqman <fariz.fnb@gmail.com>
  * @copyright   2017 Fariz Luqman
  * @license     MIT
+ *
  * @link        https://stupidlysimple.github.io/
  */
+
 namespace Simplyfier\Cache\Factories;
 
 use phpFastCache\CacheManager;
 
 /**
- * Class phpFastCacheFactory
- * @package Simplyfier\Cache\Factories
+ * Class phpFastCacheFactory.
+ *
  * @since 0.5.0
  */
 class phpFastCacheFactory
@@ -43,6 +44,7 @@ class phpFastCacheFactory
 
     /**
      * @param $settings
+     *
      * @since 0.5.0
      */
     public static function setSettings($settings)
@@ -52,11 +54,13 @@ class phpFastCacheFactory
 
     /**
      * @return \phpFastCache\Core\DriverAbstract
+     *
      * @since 0.5.0
      */
     public static function createInstance()
     {
         CacheManager::setup(self::$settings);
+
         return CacheManager::getInstance();
     }
 }
